@@ -7,7 +7,7 @@ public class SmokeTest
 	@Test
 	public void test1()
 	{
-		
+		System.out.println("hi");
 	}
 
 }
