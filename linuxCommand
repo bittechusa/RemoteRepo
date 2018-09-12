@@ -1,0 +1,14 @@
+pwd---present work directory
+cd---change directory
+ls---list of file
+mkdir--to make new folder
+touch----create new file
+vi----its a editor
+cd ..----one step back
+cd----root directory
+cd ~/----directly jump to a specific folder from anywhere
+cat----to view what file contains
+
+how to use and close vi editor---first press 'i' then write your content then press 'ESC' then Shift+: then type wq then enter
+
+grep----to get string value from a file 
