@@ -8,6 +8,7 @@ public class SmokeTest
 	public void test1()
 	{
 		System.out.println("hi");
+		System.out.println("new branch");
 	}
 
 }
