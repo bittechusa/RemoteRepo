@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="regression" parallel="false">
+<!-- <test name="some">
+<groups>
+<run>
+<include name="frontend"></include>
+</run>
+</groups>
+<packages>
+<package name="com.bit.ui.test"></package>
+</packages>
+</test> -->
+<listeners>
+<listener class-name="com.bit.ui.test.MyListner"></listener>
+</listeners>
+<test name="test3">
+<classes>
+<class name="com.bit.ui.test.RegresionTest">
+
+</class>
+<class name="com.bit.ui.test.SmokeTest">
+
+</class>
+</classes>
+</test>
+
+
+
+
+
+
+
+
+</suite>

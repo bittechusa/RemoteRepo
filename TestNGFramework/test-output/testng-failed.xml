@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [regression]">
+  <test thread-count="5" name="test3(failed)">
+    <classes>
+      <class name="com.bit.ui.test.RegresionTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="getData"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.bit.ui.test.RegresionTest -->
+    </classes>
+  </test> <!-- test3(failed) -->
+</suite> <!-- Failed suite [regression] -->

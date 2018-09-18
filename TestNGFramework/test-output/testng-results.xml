@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
+  <reporter-output>
+    <line>
+      <![CDATA[browser initializing]]>
+    </line>
+    <line>
+      <![CDATA[browser opened]]>
+    </line>
+    <line>
+      <![CDATA[nevigate to url]]>
+    </line>
+    <line>
+      <![CDATA[type userid]]>
+    </line>
+    <line>
+      <![CDATA[browser initializing]]>
+    </line>
+    <line>
+      <![CDATA[browser opened]]>
+    </line>
+    <line>
+      <![CDATA[nevigate to url]]>
+    </line>
+    <line>
+      <![CDATA[type userid]]>
+    </line>
+  </reporter-output>
+  <suite name="regression" duration-ms="11948" started-at="2018-09-18T00:17:35Z" finished-at="2018-09-18T00:17:47Z">
+    <groups>
+      <group name="backend">
+        <method signature="RegresionTest.goGoogle()[pri:0, instance:com.bit.ui.test.RegresionTest@224edc67]" name="goGoogle" class="com.bit.ui.test.RegresionTest"/>
+      </group> <!-- backend -->
+    </groups>
+    <test name="test3" duration-ms="11948" started-at="2018-09-18T00:17:35Z" finished-at="2018-09-18T00:17:47Z">
+      <class name="com.bit.ui.test.RegresionTest">
+        <test-method status="PASS" signature="getData(java.lang.Object, java.lang.Object)[pri:0, instance:com.bit.ui.test.RegresionTest@224edc67]" name="getData" duration-ms="6341" started-at="2018-09-18T00:17:35Z" data-provider="login" finished-at="2018-09-18T00:17:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[browser initializing]]>
+            </line>
+            <line>
+              <![CDATA[browser opened]]>
+            </line>
+            <line>
+              <![CDATA[nevigate to url]]>
+            </line>
+            <line>
+              <![CDATA[type userid]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getData -->
+        <test-method status="PASS" signature="getData(java.lang.Object, java.lang.Object)[pri:0, instance:com.bit.ui.test.RegresionTest@224edc67]" name="getData" duration-ms="4109" started-at="2018-09-18T00:17:42Z" data-provider="login" finished-at="2018-09-18T00:17:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[browser initializing]]>
+            </line>
+            <line>
+              <![CDATA[browser opened]]>
+            </line>
+            <line>
+              <![CDATA[nevigate to url]]>
+            </line>
+            <line>
+              <![CDATA[type userid]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getData -->
+        <test-method status="PASS" signature="goGoogle()[pri:0, instance:com.bit.ui.test.RegresionTest@224edc67]" name="goGoogle" duration-ms="1441" started-at="2018-09-18T00:17:46Z" description="opened chrome driver" finished-at="2018-09-18T00:17:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goGoogle -->
+      </class> <!-- com.bit.ui.test.RegresionTest -->
+    </test> <!-- test3 -->
+  </suite> <!-- regression -->
+</testng-results>
