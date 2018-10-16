@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="regression" parallel="methods">
-<test name="some">
+<!-- <test name="some">
 <parameter name="browser" value="chrome"></parameter>
 <classes>
 <class name="com.bit.ui.test.IntegrationTest">
@@ -9,13 +9,13 @@
 </methods>
 </class>
 </classes>
-</test>
-<test name="goYahoo">
-<parameter name="browser" value="firefox"></parameter>
+</test> -->
+<test name="goYahoo1">
+<parameter name="browser" value="chrome"></parameter>
 <classes>
-<class name="com.bit.ui.test.IntegrationTest">
+<class name="com.bit.ui.test.SmokeTest">
 <methods>
-<include name="test2"></include>
+<include name="goYahoo"></include>
 </methods>
 </class>
 </classes>

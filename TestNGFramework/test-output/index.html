@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-regression">
-              <span class="suite-name border-passed">regression</span>
+              <span class="suite-name border-failed">regression</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,17 +49,17 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-regression">
-                    <span>listner.xml</span>
+                    <span>grid.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-regression">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-regression">
-                    <span>1 group</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-regression" class="hide-methods failed suite-regression"> (hide)</a> <!-- hide-methods failed suite-regression -->
+                      <a href="#" panel-name="suite-regression" class="show-methods failed suite-regression"> (show)</a> <!-- show-methods failed suite-regression -->
+                    </span>
+                    <div class="method-list-content failed suite-regression">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.bit.ui.test.GridExecution" hash-for-method="test2">test2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.bit.ui.test.GridExecution" hash-for-method="test3">test3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-regression -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +121,7 @@
                     <div class="method-list-content passed suite-regression">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.bit.ui.test.RegresionTest" hash-for-method="getData(user1, 1234)">getData(user1, 1234)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.bit.ui.test.RegresionTest" hash-for-method="getData(user2, 12345)">getData(user2, 12345)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.bit.ui.test.RegresionTest" hash-for-method="goGoogle">goGoogle</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-regression" title="com.bit.ui.test.GridExecution" hash-for-method="test1">test1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-regression -->
@@ -127,35 +136,154 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-regression" class="panel regression">
-          <div class="suite-regression-class-passed">
+          <div class="suite-regression-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.bit.ui.test.RegresionTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.bit.ui.test.GridExecution</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="getData(user1, 1234)">
-                  </a> <!-- getData(user1, 1234) -->
-                  <span class="method-name">getData</span>
-                  <span class="parameters">(user1, 1234)</span>
+                  <a name="test2">
+                  </a> <!-- test2 -->
+                  <span class="method-name">test2</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;bittechs-imac-3.lan&apos;, ip: &apos;192.168.86.31&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.5&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at com.bit.ui.test.GridExecution.test2(GridExecution.java:29)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Failed to connect to localhost/fe80:0:0:0:0:0:0:1%1:4444
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:242)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:160)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+	at okhttp3.RealCall.execute(RealCall.java:77)
+	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:101)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
+	... 46 more
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="getData(user2, 12345)">
-                  </a> <!-- getData(user2, 12345) -->
-                  <span class="method-name">getData</span>
-                  <span class="parameters">(user2, 12345)</span>
+                  <a name="test3">
+                  </a> <!-- test3 -->
+                  <span class="method-name">test3</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Error forwarding the new session cannot find : Capabilities {browserName: chrome, platform: WINDOWS, version: }
+Command duration or timeout: 106 milliseconds
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$new$0(JsonWireProtocolResponse.java:53)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$getResponseFunction$2(JsonWireProtocolResponse.java:91)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at com.bit.ui.test.GridExecution.test3(GridExecution.java:39)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.openqa.selenium.WebDriverException: Error forwarding the new session cannot find : Capabilities {browserName: chrome, platform: WINDOWS, version: }
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;bittechs-imac-3.lan&apos;, ip: &apos;192.168.86.31&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.9.5&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown
+	at org.openqa.grid.web.servlet.handler.RequestHandler.process(RequestHandler.java:118)
+	at org.openqa.grid.web.servlet.DriverServlet.process(DriverServlet.java:86)
+	at org.openqa.grid.web.servlet.DriverServlet.doPost(DriverServlet.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.seleniumhq.jetty9.servlet.ServletHolder.handle(ServletHolder.java:860)
+	at org.seleniumhq.jetty9.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.seleniumhq.jetty9.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.seleniumhq.jetty9.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.seleniumhq.jetty9.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.seleniumhq.jetty9.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.seleniumhq.jetty9.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.seleniumhq.jetty9.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.seleniumhq.jetty9.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.seleniumhq.jetty9.server.Server.handle(Server.java:530)
+	at org.seleniumhq.jetty9.server.HttpChannel.handle(HttpChannel.java:347)
+	at org.seleniumhq.jetty9.server.HttpConnection.onFillable(HttpConnection.java:256)
+	at org.seleniumhq.jetty9.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.seleniumhq.jetty9.io.FillInterest.fillable(FillInterest.java:102)
+	at org.seleniumhq.jetty9.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:247)
+	at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:140)
+	at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.seleniumhq.jetty9.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:382)
+	at org.seleniumhq.jetty9.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:708)
+	at org.seleniumhq.jetty9.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:626)
+	... 1 more
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-regression-class-failed -->
+          <div class="suite-regression-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.bit.ui.test.GridExecution</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="goGoogle">
-                  </a> <!-- goGoogle -->
-                  <span class="method-name">goGoogle</span>
-                  <em>
-(opened chrome driver)                  </em>
+                  <a name="test1">
+                  </a> <!-- test1 -->
+                  <span class="method-name">test1</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -163,21 +291,40 @@
         </div> <!-- panel regression -->
         <div panel-name="test-xml-regression" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/bittechconsulting/eclipse-workspace/TestNGFramework/listner.xml</span>
+            <span class="header-content">/Users/bittechconsulting/Desktop/RemoteRepo/TestNGFramework/grid.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;regression&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.bit.ui.test.MyListner&quot;/&gt;
-  &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;test3&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;regression&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;unit&quot; parallel=&quot;tests&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.bit.ui.test.RegresionTest&quot;/&gt;
+      &lt;class name=&quot;com.bit.ui.test.GridExecution&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;test1&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.bit.ui.test.GridExecution --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- test3 --&gt;
+  &lt;/test&gt; &lt;!-- unit --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;smoke&quot; parallel=&quot;tests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.bit.ui.test.GridExecution&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;test2&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.bit.ui.test.GridExecution --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- smoke --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;regression&quot; parallel=&quot;tests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.bit.ui.test.GridExecution&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;test3&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.bit.ui.test.GridExecution --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- regression --&gt;
 &lt;/suite&gt; &lt;!-- regression --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -189,7 +336,13 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">test3 (1 class)</span>
+                <span class="test-name">unit (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">smoke (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">regression (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -199,14 +352,6 @@
             <span class="header-content">Groups for regression</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">backend</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">goGoogle</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-regression" class="panel">
@@ -225,22 +370,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getData')
-data.setCell(0, 2, 'com.bit.ui.test.RegresionTest')
-data.setCell(0, 3, 6341);
+data.setCell(0, 1, 'test2')
+data.setCell(0, 2, 'com.bit.ui.test.GridExecution')
+data.setCell(0, 3, 58388094);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'getData')
-data.setCell(1, 2, 'com.bit.ui.test.RegresionTest')
-data.setCell(1, 3, 4109);
+data.setCell(1, 1, 'test1')
+data.setCell(1, 2, 'com.bit.ui.test.GridExecution')
+data.setCell(1, 3, 4377);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'goGoogle')
-data.setCell(2, 2, 'com.bit.ui.test.RegresionTest')
-data.setCell(2, 3, 1441);
+data.setCell(2, 1, 'test3')
+data.setCell(2, 2, 'com.bit.ui.test.GridExecution')
+data.setCell(2, 3, 1086);
 window.suiteTableData['regression']= { tableData: data, tableDiv: 'times-div-regression'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 16 hours</span>
               <div id="times-div-regression">
               </div> <!-- times-div-regression -->
             </div> <!-- times-div -->
@@ -251,34 +396,26 @@ return data;
             <span class="header-content">Reporter output for regression</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">getData(user1, 1234)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">browser initializing</span>
-                <span class="reporter-method-output">browser opened</span>
-                <span class="reporter-method-output">nevigate to url</span>
-                <span class="reporter-method-output">type userid</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">getData(user2, 12345)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">browser initializing</span>
-                <span class="reporter-method-output">browser opened</span>
-                <span class="reporter-method-output">nevigate to url</span>
-                <span class="reporter-method-output">type userid</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-regression" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.bit.ui.test.RegresionTest</span>
+              <span class="ignored-class-name">com.bit.ui.test.GridExecution</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">test1</span>
+                <br/>
+                <span class="ignored-method-name">test1</span>
+                <br/>
+                <span class="ignored-method-name">test2</span>
+                <br/>
+                <span class="ignored-method-name">test2</span>
+                <br/>
+                <span class="ignored-method-name">test3</span>
+                <br/>
                 <span class="ignored-method-name">test3</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
@@ -291,18 +428,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.bit.ui.test.RegresionTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.bit.ui.test.GridExecution</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">getData(user1, 1234)</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test3</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">getData(user2, 12345)</span>
-                <span class="method-start">6343 ms</span>
+                <span class="method-name">test1</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">goGoogle</span>
-                <span class="method-start">10454 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test2</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

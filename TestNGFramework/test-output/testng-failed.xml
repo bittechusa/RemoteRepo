@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [regression]">
-  <test thread-count="5" name="test3(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [regression]" parallel="tests">
+  <test thread-count="5" name="regression(failed)" parallel="tests">
     <classes>
-      <class name="com.bit.ui.test.RegresionTest">
+      <class name="com.bit.ui.test.GridExecution">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="getData"/>
-          <include name="afterMethod"/>
+          <include name="test3"/>
         </methods>
-      </class> <!-- com.bit.ui.test.RegresionTest -->
+      </class> <!-- com.bit.ui.test.GridExecution -->
     </classes>
-  </test> <!-- test3(failed) -->
+  </test> <!-- regression(failed) -->
+  <test thread-count="5" name="smoke(failed)" parallel="tests">
+    <classes>
+      <class name="com.bit.ui.test.GridExecution">
+        <methods>
+          <include name="test2"/>
+        </methods>
+      </class> <!-- com.bit.ui.test.GridExecution -->
+    </classes>
+  </test> <!-- smoke(failed) -->
 </suite> <!-- Failed suite [regression] -->

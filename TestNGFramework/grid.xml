@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="regression" parallel="tests" thread-count="3">
+<test name="unit">
+<classes>
+<class name="com.bit.ui.test.GridExecution">
+<methods>
+<include name="test1"></include>
+</methods>
+</class>
+</classes>
+</test>
+
+<test name="smoke">
+<classes>
+<class name="com.bit.ui.test.GridExecution">
+<methods>
+<include name="test2"></include>
+</methods>
+</class>
+</classes>
+</test>
+
+<test name="regression">
+<classes>
+<class name="com.bit.ui.test.GridExecution">
+<methods>
+<include name="test3"></include>
+</methods>
+</class>
+</classes>
+</test>
+</suite>

@@ -14,10 +14,13 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
@@ -31,13 +34,18 @@ public class BaseTest {
   @BeforeMethod
   public void beforeMethod(String browser) 
   {
+		DOMConfigurator.configure("log4j.xml");
+		Logger log=Logger.getLogger(BaseTest.class);
 		if(browser.equals("chrome"))
 		{
 			System.out.println("opened chrome browser");
+			log.info("opened chromeBrowser");
+			Reporter.log("opened chrome browser");
 			  System.setProperty("webdriver.chrome.driver", "/Users/bittechconsulting/Downloads/chromedriver");
 				dr=new ChromeDriver();
 				dr.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				dr.get("https://www.amazon.com/");
+				log.info("nevigate to url");
 		}
 		else if (browser.equals("firefox"))
 		{

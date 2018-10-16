@@ -1,0 +1,14 @@
+2018-10-15 19:40:32,486 INFO  [BaseTest] opened chromeBrowser 
+2018-10-15 19:40:50,561 INFO  [BaseTest] nevigate to url 
+2018-10-15 19:41:52,938 INFO  [BaseTest] opened chromeBrowser 
+2018-10-15 19:41:58,899 INFO  [BaseTest] nevigate to url 
+2018-10-15 19:44:15,246 INFO  [BaseTest] opened chromeBrowser 
+2018-10-15 19:44:21,102 INFO  [BaseTest] nevigate to url 
+2018-10-15 19:44:31,181 INFO  [SmokeTest] nevigate to url 
+2018-10-15 19:45:42,826 INFO  [BaseTest] opened chromeBrowser 
+2018-10-15 19:45:51,448 INFO  [BaseTest] nevigate to url 
+2018-10-15 19:45:56,708 INFO  [SmokeTest] nevigate to url 
+2018-10-15 19:47:03,802 INFO  [BaseTest] opened chromeBrowser 
+2018-10-15 19:47:11,505 INFO  [BaseTest] nevigate to url 
+2018-10-15 19:47:18,332 DEBUG [SmokeTest]  debug nevigate to url 
+2018-10-15 19:47:18,332 INFO  [SmokeTest] nevigate to url 
